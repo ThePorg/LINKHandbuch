@@ -3,5 +3,5 @@
 *.out
 *.idx
 *.lof
-*.syntex.gz
+*.synctex.gz
 *.toc
