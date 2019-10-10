@@ -1,4 +1,4 @@
-\documentclass[titlepage,a4paper]{article}
+\documentclass [titlepage,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
@@ -23,7 +23,7 @@
 \linespread{1.3}
 
 
-\title{Ausstellung "Link zur K.I."\\
+\title{Ausstellung ''Link zur K.I."\\
 Handbuch Interaktive Stationen\\
 (WIP)}
 \author{
@@ -31,7 +31,7 @@ Handbuch Interaktive Stationen\\
     Universität Konstanz
 }
 
-\date{September 2019}
+\date{Oktober 2019}
 
 \makeindex
 
@@ -60,6 +60,7 @@ Handbuch Interaktive Stationen\\
 
 Alle Computer haben das Passwort \textit{link}.
 
+\newpage
 \section{Raum 1 ('Desktop')}
 
 \subsection{Videoinstallation}
@@ -85,10 +86,121 @@ Der Medienrechner steuert die Projektoren mit dem Programm Resolume an. Um die W
 
 (Abb. Resolume)
 
+
+
+
+
+
+\newpage
 \section{Raum 2 ('Platine')}
 
+\subsection{Überblick}
+
+Für diesen Raum ist die Dokumentation nicht nach einzelnen Stationen gemäß ihrer Anordnung im Raum sortiert, sondern nach Art der Station, da viele nach dem gleichen Schema funktionieren. Die verschiedenen Stationen nach ihrer räumlichen Anordnung sind: 
+
+
+\begin{itemize}
+    \item Wand 1: Der Mensch als Maschine
+        \begin{itemize}
+            \item Erklärvideo: Wandel des Menschenbildes
+        \end{itemize}
+
+    \item Wand 2: Können Maschinen denken?
+        \begin{itemize}
+            \item iPad: Vertiefung zu Alan Turing
+            \item iPad: Chat mit ELIZA
+            \item Machine Learning - Neuronale Netzwerke
+            \item Machine Learning - Entscheidungsbaum
+            \item iPad: Die Dartmouth-Konferenz
+        \end{itemize}
+
+    \item Wand 3: AI - all inclusive?
+        \begin{itemize}
+            \item Erklärvideo: Big Data 
+        \end{itemize}
+
+    \item Wand 4: Intelligenz
+        \begin{itemize}
+            \item iPad: Intelligenztest
+        \end{itemize}
+
+    \item Raummitte: CPU
+\end{itemize}
+
+Im Folgenden sind nun die verschiedenen Arten Stationen jeweils erklärt. 
+
+\subsection{Erklärvideos}
+
+Die beiden Erklärvideos finden sich an Wand 1 und Wand 3. Die beiden Stationen bestehen jeweils aus einem Molitor Mediaplayer, der das Video, das auf einer SD-Karte gespeichert ist, abspielt. Über HDMI wird das Video auf den dazugehörigen 27-Zoll-Monitor übertragen. 
+
+\subsubsection{Hardware \& Verkabelung}
+
+Mediaplayer:
+\begin{itemize}
+    \item Stromanschluss
+    \item HDMI-Anschluss $\rightarrow$ Monitor
+    \item Audioausgang (Phönixstecker) $\rightarrow$ Einhandhörer (jeweils alle 4 Farben; zwei Kabel je Farbe in einen Eingang)
+    \item SD-Karte] 
+\end{itemize}
+
+
+Monitor:
+- Strom
+- HDMI $\leftarrow$ Mediaplayer
+
+Einhandhörer:
+- Audioeingang (bunte Kabel) $\leftarrow$ Mediaplayer
+
+\begin{figure} H]
+    \centering
+    \includegraphics [width=1\textwidth]{images/AP01_Wiring_Detail.jpg}
+    \caption{Verkabelung des Mediaplayers}
+    \label{verkabelung_mediaplayer}
+\end{figure}
+
+\paragraph{Software \& Einstellungen}
+
+
+\subsection{iPads}
+
+\paragraph{Hardware \& Verkabelung}
+
+\paragraph{Software \& Einstellungen}
+
+
+\subsection{Machine Learning Stationen}
+
+\paragraph{Hardware \& Verkabelung}
+
+\paragraph{Software \& Einstellungen}
+
+
+
+\subsection{CPU}
+
+\paragraph{Hardware \& Verkabelung}
+
+Rechner $\rightarrow$ Strom
+        $\rightarrow$ 4x Monitoranschluss (1x HDMI + 3x Displayport + Adapter (?))
+
+\paragraph{Software \& Einstellungen}
+
+Rechner $\rightarrow$ Server für iPads
+        $\rightarrow$ Resolume
+
+
+\newpage
 \section{Raum 3 ('Server')}
 
+\subsection{Medizinquiz}
+
+\paragraph{Hardware \& Verkabelung}
+
+\paragraph{Software \& Einstellungen}
+
+
+
+\newpage
 \section{Raum 4 ('Cloud')}
 
 \subsection{Chatbot 'Aski'}
