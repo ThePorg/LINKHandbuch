@@ -225,15 +225,34 @@ Die Ports, auf die die Urls enden, sind: \begin{description}
 \subsubsection{Hardware \& Verkabelung}
 
 Rechner $\rightarrow$ Strom
-        $\rightarrow$ 4x Monitoranschluss (1x HDMI + 3x Displayport + Adapter (?))
+        $\rightarrow$ 4x Monitoranschluss (1x HDMI + 3x Displayport)
+        $\rightarrow$ Ethernet\\
+Router $\rightarrow$ Strom
+       $\rightarrow$ Ethernet
 
 \subsubsection{Software \& Einstellungen}
 
 \paragraph{Server für iPads}
-TOBI?
+Auf dem zentralen Rechner in der CPU-Installation werden die Inhalte für die iPad-Stationen bereitgestellt. Dazu muss jeweils eine Instanz des Programms 'Windows Powershell' gestartet werden, um ein Terminal zu öffnen und darin die folgenden Befehle durchzuführen:
+
+\begin{itemize}
+\item Für Turing: \begin{verbatim}
+cd users/user/Desktop/LINK_Interactives_Turing
+npm start
+\end{verbatim}
+\item Für Dartmouth: \begin{verbatim}
+cd users/user/Desktop/LINK_Interactives_Dartmouth
+npm start
+\end{verbatim}
+\item Für IQ-Test: \begin{verbatim}
+cd users/user/Desktop/LINK_Interactives_IQ
+npm start
+\end{verbatim}
+\end{itemize}
 
 \paragraph{Betreiben der CPU-Bildschirme mit Resolume}
-TOBI?
+
+Um die Videoinstallation zu starten, muss Resolume Avenue 6 nach dem Starten der Server geöffnet werden. Dann muss das Kontrollfenster aus der Taskleiste wiederhergestellt werden, um die Videos zu starten. Dies wird mit einem Doppelklick auf den Reiter über den Video-Vorschaubildern gemacht. Danach wird das Kontrollfenster minimiert.
 
 
 \newpage
