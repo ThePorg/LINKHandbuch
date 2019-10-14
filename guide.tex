@@ -13,6 +13,9 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage{subcaption}
+
+\usepackage{hyperref} 
+
 \fancyhead{}
 \fancyhead[LO]{\bfseries \rightmark}
 \fancyfoot[LO]{\thepage}
@@ -98,31 +101,38 @@ Der Medienrechner steuert die Projektoren mit dem Programm Resolume an. Um die W
 
 Für diesen Raum ist die Dokumentation nicht nach einzelnen Stationen gemäß ihrer Anordnung im Raum sortiert, sondern nach Art der Station, da viele nach dem gleichen Schema funktionieren. Die verschiedenen Stationen nach ihrer räumlichen Anordnung sind: 
 
+\begin{figure} [H]
+    \centering
+    \includegraphics [width=1\textwidth]{images/Stationen_Platine.pdf}
+    \caption{Räumliche Übersicht über die interaktiven Stationen in der Platine}
+    \label{stationen_platine}
+\end{figure}
+
 
 \begin{itemize}
     \item Wand 1: Der Mensch als Maschine
-        \begin{itemize}
-            \item Erklärvideo: Wandel des Menschenbildes
-        \end{itemize}
+        \begin{description}
+            \item[1.1] Erklärvideo: Wandel des Menschenbildes
+        \end{description}
 
     \item Wand 2: Können Maschinen denken?
-        \begin{itemize}
-            \item iPad: Vertiefung zu Alan Turing
-            \item iPad: Chat mit ELIZA
-            \item Machine Learning - Neuronale Netzwerke
-            \item Machine Learning - Entscheidungsbaum
-            \item iPad: Die Dartmouth-Konferenz
-        \end{itemize}
+        \begin{description}
+            \item[2.1] iPad: Vertiefung zu Alan Turing
+            \item[2.2] iPad: Chat mit ELIZA
+            \item[2.3] Machine Learning - Neuronale Netzwerke
+            \item[2.4] Machine Learning - Entscheidungsbaum
+            \item[2.5] iPad: Die Dartmouth-Konferenz
+        \end{description}
 
     \item Wand 3: AI - all inclusive?
-        \begin{itemize}
-            \item Erklärvideo: Big Data 
-        \end{itemize}
+        \begin{description}
+            \item[3.1] Erklärvideo: Big Data 
+        \end{description}
 
     \item Wand 4: Intelligenz
-        \begin{itemize}
-            \item iPad: Intelligenztest
-        \end{itemize}
+        \begin{description}
+            \item[4.1] iPad: Intelligenztest
+        \end{description}
 
     \item Raummitte: CPU
 \end{itemize}
@@ -131,17 +141,28 @@ Im Folgenden sind nun die verschiedenen Arten Stationen jeweils erklärt.
 
 \subsection{Erklärvideos}
 
-Die beiden Erklärvideos finden sich an Wand 1 und Wand 3. Die beiden Stationen bestehen jeweils aus einem Molitor Mediaplayer, der das Video, das auf einer SD-Karte gespeichert ist, abspielt. Über HDMI wird das Video auf den dazugehörigen 27-Zoll-Monitor übertragen. 
+Die beiden Erklärvideos finden sich an Wand 1 und Wand 3. Die beiden Stationen bestehen jeweils aus einem Molitor Mediaplayer, der das Video, das auf einer SD-Karte gespeichert ist, abspielt. Über HDMI wird das Video auf den dazugehörigen 27-Zoll-Monitor übertragen. Über die vier bunten Kabel wird die dazugehörige Tonspur auf die Molitor Einhandhörer ausgegeben und umgekehrt das Signal, dass einer der Hörer abgenommen wurde, an den Mediaplayer weitergeleitet, sodass dieser das Video startet. \\
+Auf der folgenden Website finden sich Kurzanleitungen für die Mediaplayer und Einhandhörer (unsere Einhandhörer sind von dem Modell USO; online verfügbar ist nur die Anleitung für einen Audioplayer, die lässt sich aber analog auf unsere Mediaplayer übertragen): \href{https://molitor-berlin.de/produkt-support/ }{https://molitor-berlin.de/produkt-support/}
 
 \subsubsection{Hardware \& Verkabelung}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics [width=1\textwidth]{images/AP01_Wiring_Detail.jpg}
+    \caption{Verkabelung der Mediaplayer}
+    \label{verkabelung_mediaplayer}
+\end{figure}
+
+$\rightarrow$ Skizze mit Anschlüssen/ Verbindungen
 
 Mediaplayer:
 \begin{itemize}
     \item Stromanschluss
     \item HDMI-Anschluss $\rightarrow$ Monitor
     \item Audioausgang (Phönixstecker) $\rightarrow$ Einhandhörer (jeweils alle 4 Farben; zwei Kabel je Farbe in einen Eingang)
-    \item SD-Karte] 
+    \item SD-Karte
 \end{itemize}
+
 
 
 Monitor:
@@ -151,42 +172,59 @@ Monitor:
 Einhandhörer:
 - Audioeingang (bunte Kabel) $\leftarrow$ Mediaplayer
 
-\begin{figure} H]
-    \centering
-    \includegraphics [width=1\textwidth]{images/AP01_Wiring_Detail.jpg}
-    \caption{Verkabelung des Mediaplayers}
-    \label{verkabelung_mediaplayer}
-\end{figure}
+\subsubsection{Software \& Einstellungen}
 
-\paragraph{Software \& Einstellungen}
-
+Die SD-Karte wird über einen Windows-Rechner mit den entsprechenden Videos bespielt. Auch der idle-Screen wird hier als Video abgespeichert.
 
 \subsection{iPads}
 
-\paragraph{Hardware \& Verkabelung}
+\subsubsection{Hardware \& Verkabelung}
 
-\paragraph{Software \& Einstellungen}
+Die iPads werden einfach dauerhaft über ihre Ladekabel an den Strom angeschlossen. Eine Besonderheit gibt es bei Station 2.2 (Eliza): Hier wird an das iPad der Adapter angeschlossen, und an den dann einmal die Tastatur und das Ladekabel. Die Tastatur funtkioniert nur, wenn das Ladekabel auch wirklich mit dem Strom verbunden ist.
 
+\subsubsection{Software \& Einstellungen}
+
+Auf den iPads öffnet man die App "safully", die als Fullscreen-Webbrowser funktioniert. In dieser gibt man dann die Url für die jeweilige Station ein. Die Ports, auf die die Urls enden, sind: \begin{description}
+    \item[8001] iPad 4.1 - IQ-Test 
+    \item[8003] iPad 2.1 - Vertiefung Alan Turing
+    \item[8004] iPad 2.5 - Vertiefung Dartmouth Konferenz
+    \item[8007] iPad 2.2 - Eliza 
+\end{description}
+
+Per 3-fach-Klick auf den Home-Button wird anschließend der geführte Modus aktiviert, der verhindert, dass die Besucher andere Apps öffnen können. 
 
 \subsection{Machine Learning Stationen}
 
-\paragraph{Hardware \& Verkabelung}
+\subsubsection{Hardware \& Verkabelung}
 
-\paragraph{Software \& Einstellungen}
+USB A (-> Rechner/ NUC) auf B (-> Touchscreen)
+Touchscreen - HDMI - Rechner/ NUC
+Touchscreen - Strom
+Rechner/ NUC - Strom
 
+\subsubsection{Software \& Einstellungen}
 
+TOBI?
+
+Die Ports, auf die die Urls enden, sind: \begin{description}
+    \item[8005] Machine Learning 2.4 - Entscheidungsbaum
+    \item[8006] Machine Learning 2.3 - Neuronales Netzwerk
+\end{description}
 
 \subsection{CPU}
 
-\paragraph{Hardware \& Verkabelung}
+\subsubsection{Hardware \& Verkabelung}
 
 Rechner $\rightarrow$ Strom
         $\rightarrow$ 4x Monitoranschluss (1x HDMI + 3x Displayport + Adapter (?))
 
-\paragraph{Software \& Einstellungen}
+\subsubsection{Software \& Einstellungen}
 
-Rechner $\rightarrow$ Server für iPads
-        $\rightarrow$ Resolume
+\paragraph{Server für iPads}
+TOBI?
+
+\paragraph{Betreiben der CPU-Bildschirme mit Resolume}
+TOBI?
 
 
 \newpage
@@ -194,11 +232,13 @@ Rechner $\rightarrow$ Server für iPads
 
 \subsection{Medizinquiz}
 
-\paragraph{Hardware \& Verkabelung}
+\subsubsection{Hardware \& Verkabelung}
 
-\paragraph{Software \& Einstellungen}
+\subsubsection{Software \& Einstellungen}
 
-
+Die Ports, auf die die Urls enden, sind: \begin{description}
+    \item[8008] Medizinquiz
+\end{description}
 
 \newpage
 \section{Raum 4 ('Cloud')}
